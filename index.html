@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./index.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="./main.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,11 +16,11 @@
     />
     <title>Sign Up Form</title>
   </head>
-  <body >
-    <div class="bg-image bg-red-400 absolute min-w-full min-h-fit">
+  <body class="bg-gradient-to-br from-blue-700 to-violet-900  absolute min-w-full min-h-full" >
+    <div class="bg-image relative min-w-full min-h-fit">
       <div
       id="app"
-      class="flex justify-center items-center md:min-h-full bg-opacity-40"
+      class="flex justify-center items-center md:min-h-full"
     >
       <div
         class="w-4/5 md:w-2/3 lg:w-full py-12 min-h-screen block lg:grid  lg:grid-cols-2 space-y-4 justify-center items-center"
@@ -37,103 +36,105 @@
           </p>
         </div>
         <div class="col-2 space-y-4 lg:p-6">
-          <button class="bg-violet-900 rounded-lg font-light w-full">
+          <button class="bg-amber-500 shadow-md shadow-amber-900 rounded-lg font-light w-full py-4">
             <span class="px-8">
               <span class="font-bold">Try it free 7 days</span>
               then $20/mo. thereafter
             </span>
           </button>
-          <form class="" autocomplete="off" id="sign-up-form">
-            <div class="flex flex-col p-5 bg-neutral-100 space-y-3 rounded-lg">
-              <div class="f-name flex-col flex-wrap">
-                <div class="f-name-input relative max-h-fit items-start">
-                  <input
-                    id="f-name"
-                    type="text"
-                    placeholder="First Name"
-                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
-                  />
-                  <span class="absolute right-4 top-2 hidden">
-                    <img
-                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
-                      alt="..."
+          <div class="main-form bg-neutral-100 rounded-lg shadow-md shadow-neutral-900 ">
+            <form class="" autocomplete="off" id="sign-up-form">
+              <div class="flex flex-col p-5 space-y-3">5
+                <div class="f-name flex-col flex-wrap">
+                  <div class="f-name-input relative max-h-fit items-start">
+                    <input
+                      id="f-name"
+                      type="text"
+                      placeholder="First Name"
+                      class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
                     />
+                    <span class="absolute right-4 top-2 hidden">
+                      <img
+                        src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                        alt="..."
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="f-name-error italic text-[.6rem] text-red-600 text-bold hidden"
+                  >
                   </span>
                 </div>
-                <span
-                  class="f-name-error italic text-[.6rem] text-red-600 text-bold hidden"
+                <div class="l-name">
+                  <div class="l-name-input relative max-h-fit">
+                    <input
+                      id="l-name"
+                      type="text"
+                      placeholder="Last Name"
+                      class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
+                    />
+                    <span class="absolute right-4 top-2 hidden">
+                      <img
+                        src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                        alt="..."
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="l-name-error italic text-[.6rem] text-red-600 text-bold hidden"
+                  ></span>
+                </div>
+                <div class="email">
+                  <div class="email-input relative max-h-fit">
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="Email address"
+                      class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
+                    />
+                    <span class="absolute right-4 top-2 hidden">
+                      <img
+                        src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                        alt="..."
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="email-error italic text-[.6rem] text-red-600 text-bold hidden"
+                  ></span>
+                </div>
+                <div class="password">
+                  <div class="password-input relative max-h-fit">
+                    <input
+                      id="password"
+                      type="password"
+                      placeholder="Password"
+                      class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
+                    />
+                    <span class="absolute right-4 top-2 hidden">
+                      <img
+                        src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                        alt="..."
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="email-error italic text-[.6rem] text-red-600 text-bold hidden"
+                  ></span>
+                </div>
+    
+                <button type="submit" class="bg-green-500 shadow-md shadow-green-900 uppercase rounded-lg py-4">
+                  Claim your free trial
+                </button>
+                <span class="text-neutral-700 text-xs"
+                  >By clicking the button, you are agreeing to our
+                  <a href="#" class="text-red-400 focus:underline"
+                    >Terms and Services</a
+                  ></span
                 >
-                </span>
               </div>
-              <div class="l-name">
-                <div class="l-name-input relative max-h-fit">
-                  <input
-                    id="l-name"
-                    type="text"
-                    placeholder="Last Name"
-                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
-                  />
-                  <span class="absolute right-4 top-2 hidden">
-                    <img
-                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
-                      alt="..."
-                    />
-                  </span>
-                </div>
-                <span
-                  class="l-name-error italic text-[.6rem] text-red-600 text-bold hidden"
-                ></span>
-              </div>
-              <div class="email">
-                <div class="email-input relative max-h-fit">
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Email address"
-                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
-                  />
-                  <span class="absolute right-4 top-2 hidden">
-                    <img
-                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
-                      alt="..."
-                    />
-                  </span>
-                </div>
-                <span
-                  class="email-error italic text-[.6rem] text-red-600 text-bold hidden"
-                ></span>
-              </div>
-              <div class="password">
-                <div class="password-input relative max-h-fit">
-                  <input
-                    id="password"
-                    type="password"
-                    placeholder="Password"
-                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
-                  />
-                  <span class="absolute right-4 top-2 hidden">
-                    <img
-                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
-                      alt="..."
-                    />
-                  </span>
-                </div>
-                <span
-                  class="email-error italic text-[.6rem] text-red-600 text-bold hidden"
-                ></span>
-              </div>
-  
-              <button type="submit" class="bg-green-500 uppercase rounded-lg">
-                Claim your free trial
-              </button>
-              <span class="text-neutral-700 text-xs"
-                >By clicking the button, you are agreeing to our
-                <a href="#" class="text-red-400 focus:underline"
-                  >Terms and Services</a
-                ></span
-              >
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
