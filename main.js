@@ -1,4 +1,3 @@
-import "./src/style.css";
 // import { showError, showSuccess } from "./src/components";
 
 const form = document.getElementById("sign-up-form");
