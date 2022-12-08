@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sign Up Form</title>
+  </head>
+  <body class="bg-image bg-red-400 absolute min-w-full min-h-fit">
+    <div
+      id="app"
+      class="flex justify-center items-center md:min-h-full bg-opacity-40"
+    >
+      <div
+        class="w-4/5 md:w-2/3 lg:w-full py-12 min-h-screen block lg:grid  lg:grid-cols-2 space-y-4 justify-center items-center"
+      >
+        <div class="col-1 lg:text-start lg:p-6">
+          <h1 class="text-3xl font-bold pt-4 lg:text-6xl">
+            Learn to code by watching others
+          </h1>
+          <p class="py-4 lg:pt-8 text-base text-orange-100 font-normal">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think is
+            invaluable.
+          </p>
+        </div>
+        <div class="col-2 space-y-4 lg:p-6">
+          <button class="bg-violet-900 rounded-lg font-light w-full">
+            <span class="px-8">
+              <span class="font-bold">Try it free 7 days</span>
+              then $20/mo. thereafter
+            </span>
+          </button>
+          <form class="" autocomplete="off" id="sign-up-form">
+            <div class="flex flex-col p-5 bg-neutral-100 space-y-3 rounded-lg">
+              <div class="f-name flex-col flex-wrap">
+                <div class="f-name-input relative max-h-fit items-start">
+                  <input
+                    id="f-name"
+                    type="text"
+                    placeholder="First Name"
+                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
+                  />
+                  <span class="absolute right-4 top-2 hidden">
+                    <img
+                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                      alt="..."
+                    />
+                  </span>
+                </div>
+                <span
+                  class="f-name-error italic text-[.6rem] text-red-600 text-bold hidden"
+                >
+                </span>
+              </div>
+              <div class="l-name">
+                <div class="l-name-input relative max-h-fit">
+                  <input
+                    id="l-name"
+                    type="text"
+                    placeholder="Last Name"
+                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
+                  />
+                  <span class="absolute right-4 top-2 hidden">
+                    <img
+                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                      alt="..."
+                    />
+                  </span>
+                </div>
+                <span
+                  class="l-name-error italic text-[.6rem] text-red-600 text-bold hidden"
+                ></span>
+              </div>
+              <div class="email">
+                <div class="email-input relative max-h-fit">
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Email address"
+                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
+                  />
+                  <span class="absolute right-4 top-2 hidden">
+                    <img
+                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                      alt="..."
+                    />
+                  </span>
+                </div>
+                <span
+                  class="email-error italic text-[.6rem] text-red-600 text-bold hidden"
+                ></span>
+              </div>
+              <div class="password">
+                <div class="password-input relative max-h-fit">
+                  <input
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    class="w-full bg-transparent flex- border border-neutral-300 rounded-md text-sm text-bold text-neutral-800 p-3"
+                  />
+                  <span class="absolute right-4 top-2 hidden">
+                    <img
+                      src="./intro-component-with-signup-form-master/images/icon-error.svg"
+                      alt="..."
+                    />
+                  </span>
+                </div>
+                <span
+                  class="email-error italic text-[.6rem] text-red-600 text-bold hidden"
+                ></span>
+              </div>
+  
+              <button type="submit" class="bg-green-500 uppercase rounded-lg">
+                Claim your free trial
+              </button>
+              <span class="text-neutral-700 text-xs"
+                >By clicking the button, you are agreeing to our
+                <a href="#" class="text-red-400 focus:underline"
+                  >Terms and Services</a
+                ></span
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
