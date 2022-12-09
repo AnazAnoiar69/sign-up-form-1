@@ -6,15 +6,12 @@ const passwordInput = document.getElementById("password");
 const fnameContainer = document.querySelector(".f-name-input");
 const lnameContainer = document.querySelector(".l-name-input");
 const emailContainer = document.querySelector(".email-input");
-const passwordContainer = document.querySelector(".password-input"); 
+const passwordContainer = document.querySelector(".password-input");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  validateForm()
+  validateForm();
 });
-
-var mailformat =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const validateForm = () => {
   fnameInput.value === ""
@@ -24,9 +21,7 @@ const validateForm = () => {
     ? showError(lnameContainer, lnameInput, "Last Name cannot be empty")
     : showSuccess(lnameContainer, lnameInput, "");
   emailInput.value === ""
-    ? !emailInput.value.match(mailformat)
-      ? showError(emailContainer, emailInput, "Email cannot be empty")
-      : showError(emailContainer, emailInput, "Not a valid Email Address")
+    ? showError(emailContainer, emailInput, "Email cannot be empty")
     : showSuccess(emailContainer, emailInput, "");
   passwordInput.value === ""
     ? showError(passwordContainer, passwordInput, "Password cannot be empty")
@@ -37,7 +32,6 @@ const validateForm = () => {
         "Password must contain min 8 character"
       )
     : showSuccess(passwordContainer, passwordInput, "");
-  
 };
 const showError = (pe, ce, message) => {
   const span = ce.nextElementSibling;
@@ -48,15 +42,12 @@ const showError = (pe, ce, message) => {
   errMessage.classList.remove("hidden");
 };
 const showSuccess = (pe, ce, message) => {
+  
   const span = ce.nextElementSibling;
   ce.classList.remove("error");
   span.classList.add("hidden");
   const errMessage = pe.nextElementSibling;
   errMessage.innerText = message;
   errMessage.classList.add("hidden");
-    fname.value === ""
-      ? showError(fname, "First Name cannot be empty")
-      : showSuccess(fname, "First Name available");
-
-      
-}
+  
+};
